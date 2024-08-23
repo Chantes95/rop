@@ -65,7 +65,7 @@
     <form id="loginForm">
         <input type="text" id="email" placeholder="Correo electrónico" required>
         <input type="password" id="password" placeholder="Contraseña" required>
-         <button type="submit">Iniciar Sesión</button>
+        <button type="submit">Iniciar Sesión</button>
         <div class="error" id="error-message"></div>
     </form>
 </div>
@@ -77,23 +77,32 @@
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        const response = await fetch('/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
+        try {
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
 
-        const result = await response.json();
+            // Verifica si la respuesta es válida antes de convertirla a JSON
+            if (!response.ok) {
+                throw new Error('Error en la respuesta del servidor');
+            }
 
-        if (result.success) {
-            window.location.href = 'productos.html';
-            // Redireccionar o realizar alguna acción
-        } else {
-            document.getElementById('error-message').textContent = 'Correo o contraseña incorrectos';
+            const result = await response.json();
+
+            if (result.success) {
+                // Redirige a index2.html si el inicio de sesión es exitoso
+                window.location.href = 'productos.html';
+            } else {
+                document.getElementById('error-message').textContent = 'Correo o contraseña incorrectos';
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('error-message').textContent = 'Ocurrió un error al iniciar sesión';
         }
     });
 </script>
 
 </body>
 </html>
-
