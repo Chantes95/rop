@@ -5,7 +5,7 @@ const PORT = 3000;
 app.use(express.json());
 
 // Credenciales preestablecidas
-const user = { email: 'chantes1995@gmail.com', password: 'CUE2024' };
+const user = { email: 'chantes1995', password: 'CUE2024' };
 
 app.post('/login', (req, res) => {
     const { email, password } = req.body;
