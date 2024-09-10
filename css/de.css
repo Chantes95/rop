@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #FFFFFF;
+        height: 100%;
+        width: 100%;
+    }
+    .menu {
+        padding: 0;
+        margin: 0 auto;
+        list-style-type: none;
+        text-align: center;
+    }
+    .menu li {
+        display: inline-block;
+        vertical-align: top;
+        width: 87px;
+        height: auto;
+        padding-top: 18px;
+        text-align: center;
+    }
+    .menu li img {
+        width: 50px;
+        height: auto;
+    }
+    .eje a img {
+        width: 114px;
+    }
+    .cong {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .con1, .con2 {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: top;
+    }
+    .cong .fondo {
+        background-color: #FFFFFF;
+        width: 156px;
+        height: 170px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .cong .barra {
+        background-color: #0D284A;
+        width: 156px;
+        height: 42px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .con1 .barra h3 {
+        font-family: Arial, sans-serif;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 5px;
+    }
+    .oxti {
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-weight: 800; /* Extra Bold */
+        line-height: 73px;
+        font-size: 64px;
+        color: #0D284A;
+    }
+    .cami img {
+    height: 242px;
+    width: auto;
+    margin-left: 13px;
+    }
+    .cami {
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding-top: 15px;
+    }
+    .colores {
+        text-align: center;
+    }
+    .color-option {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease; /* Suaviza la transición del tamaño */
+    }
+    .color-option:hover {
+        border: 2px solid #333;
+    }
+    /* Clase para hacer que el círculo seleccionado sea más pequeño */
+    .color-option.active {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #333; /* Opcional: puede tener un borde adicional para indicar que está seleccionado */
+    }
+    .logo-container {
+    position: absolute;
+    top: 100px; /* Posición inicial */
+    left: 100px; /* Posición inicial */
+    width: 100px; /* Tamaño inicial del logo */
+    height: 100px; /* Tamaño inicial del logo */
+    cursor: move;
+}
+
+    .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   
+   
+}
+input[type="file"], input[type="range"] {
+    display: block;
+    padding-left: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 392px;
+    text-decoration: none;
+}
+.conlog {
+    text-align: center;
+    margin-top: 15px;
+}
+	
+.salir {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center;     /* Centra el botón verticalmente */
+    padding-top: 20px;               /* Asegura que ocupe toda la altura de la página */
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;   /* Elimina la decoración del enlace */
+}
+
+.bot {
+    background-color: #0D284A;  /* Color de fondo del botón */
+    color: white;               /* Color del texto */
+    cursor: pointer;            /* Cambia el cursor a "mano" */
+    text-align: center;         /* Asegura que el texto dentro esté centrado */
+    width: 290px;               /* Ancho del botón */
+    height: 59px;               /* Altura del botón */
+    border-radius: 30px;        /* Bordes redondeados */
+    display: flex;
+    justify-content: center;    /* Centra el texto horizontalmente */
+    align-items: center;        /* Centra el texto verticalmente */
+}
+
+.bot:hover {
+    background-color: #003366;  /* Color de fondo al pasar el mouse */
+}
+a .bot h3 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+}
+
+/* CSS Document */
+@media (max-width:392px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #FFFFFF;
+        height: 100%;
+        width: 100%;
+    }
+    .menu {
+        padding: 0;
+        margin: 0 auto;
+        list-style-type: none;
+        text-align: center;
+    }
+    .menu li {
+        display: inline-block;
+        vertical-align: top;
+        width: 87px;
+        height: auto;
+        padding-top: 18px;
+        text-align: center;
+    }
+    .menu li img {
+        width: 50px;
+        height: auto;
+    }
+    .eje a img {
+        width: 114px;
+    }
+    .cong {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .con1, .con2 {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: top;
+    }
+    .cong .fondo {
+        background-color: #FFFFFF;
+        width: 156px;
+        height: 170px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .cong .barra {
+        background-color: #0D284A;
+        width: 156px;
+        height: 42px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .con1 .barra h3 {
+        font-family: Arial, sans-serif;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 5px;
+    }
+    .oxti {
+        text-align: center;
+        font-family: 'Inter', sans-serif;
+        font-weight: 800; /* Extra Bold */
+        line-height: 73px;
+        font-size: 64px;
+        color: #0D284A;
+    }
+    .cami img {
+    height: 242px;
+    width: auto;
+    margin-left: 13px;
+    }
+    .cami {
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+        padding-top: 15px;
+    }
+    .colores {
+        text-align: center;
+    }
+    .color-option {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease; /* Suaviza la transición del tamaño */
+    }
+    .color-option:hover {
+        border: 2px solid #333;
+    }
+    /* Clase para hacer que el círculo seleccionado sea más pequeño */
+    .color-option.active {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #333; /* Opcional: puede tener un borde adicional para indicar que está seleccionado */
+    }
+    .logo-container {
+    position: absolute;
+    top: 100px; /* Posición inicial */
+    left: 100px; /* Posición inicial */
+    width: 100px; /* Tamaño inicial del logo */
+    height: 100px; /* Tamaño inicial del logo */
+    cursor: move;
+}
+
+    .logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   
+   
+}
+input[type="file"], input[type="range"] {
+    display: block;
+    padding-left: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 392px;
+    text-decoration: none;
+}
+.conlog {
+    text-align: center;
+    margin-top: 15px;
+}
+	
+.salir {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center;     /* Centra el botón verticalmente */
+    padding-top: 20px;               /* Asegura que ocupe toda la altura de la página */
+    padding-bottom: 20px;
+}
+
+a {
+    text-decoration: none;   /* Elimina la decoración del enlace */
+}
+
+.bot {
+    background-color: #0D284A;  /* Color de fondo del botón */
+    color: white;               /* Color del texto */
+    cursor: pointer;            /* Cambia el cursor a "mano" */
+    text-align: center;         /* Asegura que el texto dentro esté centrado */
+    width: 290px;               /* Ancho del botón */
+    height: 59px;               /* Altura del botón */
+    border-radius: 30px;        /* Bordes redondeados */
+    display: flex;
+    justify-content: center;    /* Centra el texto horizontalmente */
+    align-items: center;        /* Centra el texto verticalmente */
+}
+
+.bot:hover {
+    background-color: #003366;  /* Color de fondo al pasar el mouse */
+}
+a .bot h3 {
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+}
+
+
+
+}

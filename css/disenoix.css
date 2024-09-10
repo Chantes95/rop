@@ -4,7 +4,12 @@
         padding: 0;
         box-sizing: border-box;
     }
-@media (max-width: 392px) {
+
+	* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .ejecu .boton {
         background-color: #FFFFFF;
         width: 392px;
@@ -15,20 +20,6 @@
         justify-content: flex-start;
         align-items: center;
         padding-left: 20px;
-    }
-    .indu .boton {
-        background-color: #FFFFFF;
-        width: 392px;
-        height: 60px;
-        border-bottom-right-radius: 18px;
-        border-bottom-left-radius: 18px;
-    }
-    .casu .boton {
-        background-color: #FFFFFF;
-        width: 392px;
-        height: 60px;
-        border-bottom-right-radius: 18px;
-        border-bottom-left-radius: 18px;
     }
     .logo a img {
         margin-top: 14px;
@@ -44,19 +35,123 @@
         height: 267px;
         margin-top: 35px;
     }
-    .indu .gris {
+    
+    .ejecu .boton .bot {
+	font-family: Arial, sans-serif;
+    background-color: #0D284A;  /* Color de fondo del botón */
+    color: white;               /* Color del texto */
+    cursor: pointer;            /* Cambia el cursor a "mano" */
+    text-align: center;         /* Asegura que el texto dentro esté centrado */
+    width: 140px;               /* Ancho del botón */
+    height: 32px;               /* Altura del botón */
+    border-radius: 30px;        /* Bordes redondeados */
+    display: flex;
+    justify-content: center;    /* Centra el texto horizontalmente */
+    align-items: center;        /* Centra el texto verticalmente */
+    }
+.ejecu .maneje3 {
+    position: absolute;
+    left: 233px;
+    top: 807px;
+}
+.ejecu .maneje2 {
+    position: absolute;
+    left: 233px;
+    top: 447px;
+}
+
+
+    .ejecu .maneje {
+    position: absolute;
+    left: 233px;
+    top: 74px;
+    }
+    .ejecu .gris h2 {
+    font-family: Arial, sans-serif;
+    position: relative;
+    top: 229px;
+    padding-left: 8px;
+    }
+	a {
+    text-decoration: none;   /* Elimina la decoración del enlace */
+}
+	.bot:hover {
+    background-color: #003366;  /* Color de fondo al pasar el mouse */
+}
+	.cong {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    }
+    .con1, .con2 {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: top;
+    }
+    .cong .fondo {
+        background-color: #FFFFFF;
+        width: 156px;
+        height: 170px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .cong .barra {
+        background-color: #0D284A;
+        width: 156px;
+        height: 42px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .con1 .barra h3 {
+        font-family: Arial, sans-serif;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 5px;
+    }
+    .barra:hover {
+        background-color: #003366; /* Color de fondo al pasar el mouse */
+    }
+    a {
+        text-decoration: none; /* Elimina la decoración del enlace */
+    }  width: 100%;
+    }
+
+@media (max-width: 392px) {
+	* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .ejecu .boton {
+        background-color: #FFFFFF;
+        width: 392px;
+        height: 60px;
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+    }
+    .logo a img {
+        margin-top: 14px;
+    }
+    body {
+        background-color: #4F82C1;
+        height: 100%;
+        width: 100%;
+    }
+    .ejecu .gris {
         background-color: #D9D9D9;
         width: 392px;
         height: 267px;
         margin-top: 35px;
     }
-    .casu .gris {
-        background-color: #D9D9D9;
-        width: 392px;
-        height: 267px;
-        margin-top: 35px;
-    }
-   
+    
     .ejecu .boton .bot {
 	font-family: Arial, sans-serif;
     background-color: #0D284A;  /* Color de fondo del botón */
