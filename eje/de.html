@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prenda Oxford</title>
+<link href="../css/ox.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<ul class="menu">
+  <li><a href="../productos.html"><img src="../elem/menu/menu-14.png"  alt=""/></a></li>
+  <li class="eje"><a href="../eje.html"><img src="../elem/menu/menu-13.png" alt=""/></a></li>
+  <li><a href="../ind.html"><img src="../elem/menu/menu-09.png" alt=""/></a></li>
+  <li><a href="../cas.html"><img src="../elem/menu/menu-10.png" alt=""/></a></li>
+</ul>
+<h2 class="oxti">Delicias</h2>
+<div class="cami"> 
+  <!-- Prenda que cambiará de color --> 
+  <img src="../elem/ejecu/DELICIAS/Grupo 5.png" alt="Prenda actual" id="prenda"> 
+  
+  <!-- Contenedor del primer logo -->
+  <div id="logoContainer1" class="logo-container" style="display:none;"> <img id="logoImg1" src="" alt="Logo 1 del Usuario" /> </div>
+  
+  <!-- Contenedor del segundo logo -->
+  <div id="logoContainer2" class="logo-container" style="display:none;"> <img id="logoImg2" src="" alt="Logo 2 del Usuario" /> </div>
+</div>
+
+<!-- Selector de colores -->
+<div class="colores"> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 5.png" style="background-color: #222939;"></span> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 2.png" style="background-color: #27262B;"></span> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 3.png" style="background-color: #F63E3C;"></span> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 4.png" style="background-color: #504635;"></span><span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 6.png" style="background-color: #642E37;"></span><span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 7.png" style="background-color: #A88E89;"></span> </div>
+<div class="conlog">
+  <label for="uploadLogo1">Cargar Logo 1</label>
+  <!-- Botón para cargar el primer logo -->
+  <input type="file" id="uploadLogo1" accept="image/*">
+  
+  <!-- Control para escalar el primer logo -->
+  <label for="logoSize1">Tamaño del Logo 1</label>
+  <input type="range" id="logoSize1" min="20" max="300" value="100">
+  <label for="uploadLogo2">Cargar Logo 2</label>
+  <!-- Botón para cargar el segundo logo -->
+  <input type="file" id="uploadLogo2" accept="image/*">
+  
+  <!-- Control para escalar el segundo logo -->
+  <label for="logoSize2">Tamaño del Logo 2</label>
+  <input type="range" id="logoSize2" min="20" max="300" value="100">
+</div>
+<div class="salir"> <a href="../eje.html">
+  <div class="bot">
+    <h3>Salir.</h3>
+  </div>
+  </a> </div>
+<script src="../js/coloresox.js"></script>
+</body>
+</html>
