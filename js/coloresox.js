@@ -118,4 +118,64 @@ colorOptions.forEach(option => {
         document.getElementById('prenda').src = newImageSrc;
     });
 });
+// Selección de color para Logo 1
+document.querySelectorAll('.colorPalette .color-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const color = this.getAttribute('data-color');
+        const logo = document.getElementById('logoImg1');
+        applyColorFilter(logo, color);
+    });
+});
+// Selección de color para Logo 2
+document.querySelectorAll('.colorPalette .color-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const color = this.getAttribute('data-color');
+        const logo = document.getElementById('logoImg2');
+        applyColorFilter(logo, color);
+    });
+});
+
+// Selección de color para ambos logos
+document.querySelectorAll('.color-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const color = this.getAttribute('data-color');
+        
+        // Cambia el color del logo 1 si está cargado
+        const logo1 = document.getElementById('logoImg1');
+        if (logo1 && logo1.src) {
+            applyColorFilter(logo1, color);
+        }
+
+        // Cambia el color del logo 2 si está cargado
+        const logo2 = document.getElementById('logoImg2');
+        if (logo2 && logo2.src) {
+            applyColorFilter(logo2, color);
+        }
+    });
+});
+// Aplicar el filtro de color a las imágenes de los logos
+function applyColorFilter(logo, color) {
+    switch(color) {
+        case 'white':
+            logo.style.filter = 'brightness(0) saturate(100%) invert(100%)'; // Blanco
+            break;
+        case 'black':
+            logo.style.filter = 'brightness(0) saturate(100%)'; // Negro
+            break;
+        case 'blue':
+            logo.style.filter = 'brightness(2.0) saturate(250%) sepia(100%) hue-rotate(175deg)'; // Azul Cielo más claro y brillante
+            break;
+        case 'navy':
+            logo.style.filter = 'brightness(0.7) saturate(100%) sepia(100%) hue-rotate(190deg) saturate(300%)'; // Azul Marino ajustado
+            break;
+        case 'gray':
+            logo.style.filter = 'brightness(0.9) saturate(0%) grayscale(100%)'; // Gris
+            break;
+        default:
+            logo.style.filter = 'none';
+            break;
+    }
+}
+
+
 
