@@ -1,51 +1,33 @@
-// Función para cargar el primer logo
-document.getElementById('uploadLogo1').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = document.getElementById('logoImg1');
-            img.src = e.target.result;
-            document.getElementById('logoContainer1').style.display = 'block'; // Mostrar el logo 1
-        }
-        reader.readAsDataURL(file);
-    }
-});
-
-// Función para cargar el segundo logo
-document.getElementById('uploadLogo2').addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = document.getElementById('logoImg2');
-            img.src = e.target.result;
-            document.getElementById('logoContainer2').style.display = 'block'; // Mostrar el logo 2
-        }
-        reader.readAsDataURL(file);
-    }
-});
-
-// Hacer ambos logos arrastrables
-dragElement(document.getElementById("logoContainer1"));
-dragElement(document.getElementById("logoContainer2"));
-
 function dragElement(elmnt) {
     let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    
+    // Eventos para dispositivos con mouse
     elmnt.onmousedown = dragMouseDown;
 
+    // Eventos para dispositivos táctiles
+    elmnt.ontouchstart = dragTouchStart;
+
+    // Funciones para el mouse
     function dragMouseDown(e) {
         e.preventDefault();
-        // Obtener la posición inicial del mouse
         pos3 = e.clientX;
         pos4 = e.clientY;
         document.onmouseup = closeDragElement;
         document.onmousemove = elementDrag;
     }
 
+    // Funciones para el toque táctil
+    function dragTouchStart(e) {
+        e.preventDefault();
+        pos3 = e.touches[0].clientX;
+        pos4 = e.touches[0].clientY;
+        document.ontouchend = closeDragElement;
+        document.ontouchmove = elementTouchDrag;
+    }
+
+    // Movimiento para el mouse
     function elementDrag(e) {
         e.preventDefault();
-        // Calcular la nueva posición del logo
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
@@ -54,41 +36,22 @@ function dragElement(elmnt) {
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
 
+    // Movimiento para el toque táctil
+    function elementTouchDrag(e) {
+        e.preventDefault();
+        pos1 = pos3 - e.touches[0].clientX;
+        pos2 = pos4 - e.touches[0].clientY;
+        pos3 = e.touches[0].clientX;
+        pos4 = e.touches[0].clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    // Finalizar el arrastre para ambos (mouse y toque)
     function closeDragElement() {
         document.onmouseup = null;
         document.onmousemove = null;
+        document.ontouchend = null;
+        document.ontouchmove = null;
     }
 }
-
-// Escalar el tamaño del primer logo
-const logoSizeSlider1 = document.getElementById('logoSize1');
-const logoContainer1 = document.getElementById('logoContainer1');
-
-logoSizeSlider1.addEventListener('input', function() {
-    const newSize = logoSizeSlider1.value;
-    logoContainer1.style.width = newSize + 'px';
-    logoContainer1.style.height = newSize + 'px';
-});
-
-// Escalar el tamaño del segundo logo
-const logoSizeSlider2 = document.getElementById('logoSize2');
-const logoContainer2 = document.getElementById('logoContainer2');
-
-logoSizeSlider2.addEventListener('input', function() {
-    const newSize = logoSizeSlider2.value;
-    logoContainer2.style.width = newSize + 'px';
-    logoContainer2.style.height = newSize + 'px';
-});
-
-// Cambiar el color de la prenda sin perder los logos
-const colorOptions = document.querySelectorAll('.color-option');
-
-colorOptions.forEach(option => {
-    option.addEventListener('click', function() {
-        const newImageSrc = option.getAttribute('data-image');
-        
-        // Cambia solo la imagen de la prenda, no afecta los logos
-        document.getElementById('prenda').src = newImageSrc;
-    });
-});
-
