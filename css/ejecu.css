@@ -21,14 +21,14 @@
 .menu li {
     display: inline-block;
     vertical-align: top;
-    width: 272px;
+    width: 184px;
     height: auto;
     padding-top: 18px;
     text-align: center;
 }
 
 .menu li img {
-    width: 95px;
+    width: 85px;
     height: auto;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .eje a img {
-    width: 236px;
+    width: 212px;
 }
 
 
