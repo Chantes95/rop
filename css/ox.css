@@ -54,17 +54,14 @@
         text-align: center;
     }
     .color-option {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-top: 0;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-bottom: 0;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease; /* Suaviza la transición del tamaño */
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 10px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.3s ease; /* Suaviza la transición del tamaño */
     }
     .color-option:hover {
         border: 2px solid #333;
@@ -82,7 +79,6 @@
     width: 100px; /* Tamaño inicial del logo */
     height: 100px; /* Tamaño inicial del logo */
     cursor: move;
-	font-family: Arial, sans-serif;
 }
 
     .logo-container img {
@@ -109,7 +105,6 @@ input[type="file"], input[type="range"] {
     margin: 0 auto;          /* Centra el contenedor si es necesario */
     padding: 20px;           /* Añade algo de espacio alrededor */
 }
-
 	
 .salir {
     display: flex;
@@ -144,4 +139,15 @@ a .bot h3 {
     font-size: 36px;
 }
 /* CSS Document */
+.color-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin: 5px;
+    cursor: pointer;
+}
 
+.color-btn:focus {
+    outline: 2px solid #000;
+}
