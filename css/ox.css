@@ -29,7 +29,7 @@
     height: auto;
 }
 .eje a img {
-    width: 212px;
+    width: 200px;
 }
     .oxti {
         text-align: center;
@@ -44,6 +44,7 @@
     justify-content: center;  /* Centra horizontalmente la imagen */
     align-items: center;      /* Centra verticalmente la imagen */
     height: 100%;             /* Asegura que el contenedor ocupe el 100% de la altura */
+    width: 100%;
 }
 
 .cami img {
@@ -88,13 +89,14 @@
    
    
 }
-input[type="file"], input[type="range"] {
+input[type="file"]{
     display: block;
     padding-left: 35px;
     margin-top: 15px;
     margin-bottom: 15px;
-    width: 392px;
+    width: 496px;
     text-decoration: none;
+    height: 54px;
 }
 .conlog {
     display: flex;
@@ -103,7 +105,10 @@ input[type="file"], input[type="range"] {
     align-items: center;     /* Centra los elementos horizontalmente */
     text-align: center;      /* Asegura que el texto esté centrado */
     margin: 0 auto;          /* Centra el contenedor si es necesario */
-    padding: 20px;           /* Añade algo de espacio alrededor */
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;           /* Añade algo de espacio alrededor */
 }
 	
 .salir {
@@ -150,4 +155,65 @@ a .bot h3 {
 
 .color-btn:focus {
     outline: 2px solid #000;
+}
+.contenedor-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    font-family: Arial, sans-serif;
+    padding-top: 20px;
+}
+
+/* Estilo general para el control deslizante */
+input[type="range"] {
+    -webkit-appearance: none;  /* Elimina el estilo predeterminado de los navegadores en WebKit (Chrome, Safari) */
+    width: 34%;               /* Ajusta el ancho completo */
+    height: 20px;              /* Altura del "track" */
+    background: #ddd;          /* Color de fondo del "track" */
+    border-radius: 5px;        /* Bordes redondeados */
+    outline: none;             /* Elimina el borde de enfoque */
+}
+.conlog label {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-size: 20px;
+	font-family: Arial, sans-serif;
+}
+
+
+/* Estilo del "thumb" (el botón que arrastras) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado de los navegadores en WebKit */
+    appearance: none;
+    width: 25px;              /* Ancho del "thumb" */
+    height: 25px;             /* Altura del "thumb" */
+    background: #0D284A;      /* Color del "thumb" */
+    cursor: pointer;          /* Cambia el cursor a "mano" cuando pasas sobre él */
+    border-radius: 50%;       /* Redondea el "thumb" */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;              /* Ancho del "thumb" en Firefox */
+    height: 25px;             /* Altura del "thumb" en Firefox */
+    background: #0D284A;      /* Color del "thumb" */
+    cursor: pointer;
+    border-radius: 50%;       /* Redondea el "thumb" */
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    input[type="range"] {
+        height: 20px;  /* Hace que el "track" sea más alto en móviles */
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        width: 35px;  /* Hace el "thumb" más grande en móviles */
+        height: 35px;
+    }
+    
+    input[type="range"]::-moz-range-thumb {
+        width: 35px;  /* Hace el "thumb" más grande en móviles */
+        height: 35px;
+    }
 }
