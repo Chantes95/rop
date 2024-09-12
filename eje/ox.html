@@ -72,6 +72,14 @@
     <h3>Salir.</h3>
   </div>
   </a> </div>
+	
 <script src="../js/coloresox.js"></script>
+	<script>
+    window.onload = function() {
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = '../index.html'; // Redirige al index si no está logueado
+        }
+    };
+</script>
 </body>
 </html>
