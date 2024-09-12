@@ -16,7 +16,7 @@
 <h2 class="oxti">Oxford</h2>
 <div class="cami"> 
   <!-- Prenda que cambiará de color --> 
-  <img id="prenda" src="../elem/ejecu/oxford/oxf_marino.jpg" alt="Prenda actual"> 
+  <img id="prenda" src="../elem/ejecu/oxford/oxf_azul_claro.jpg" alt="Prenda actual"> 
   
   <!-- Contenedor del primer logo -->
   <div id="logoContainer1" class="logo-container" style="display:none;"> <img id="logoImg1" src="" alt="Logo 1 del Usuario" /> </div>
@@ -26,7 +26,28 @@
 </div>
 
 <!-- Selector de colores -->
-<div class="colores"> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_marino.jpg" style="background-color: #003366;"></span> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_azul_claro.jpg" style="background-color: #A9CCE3;"></span> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_rosa.jpg" style="background-color: #ECDEDE;"></span> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_gris.jpg" style="background-color: #BDC3C7;"></span> </div>
+<div class="colores">
+    <div class="color-item">
+        <span class="color-name">Azul</span>
+        <span class="color-option" data-image="../elem/ejecu/oxford/oxf_azul_claro.jpg" style="background-color: #BBCAE7;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Blanco</span>
+        <span class="color-option" data-image="../elem/ejecu/oxford/oxf_blanco.png" style="background-color: #FBFBFB;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Gris</span>
+        <span class="color-option" data-image="../elem/ejecu/oxford/oxf_gris.jpg" style="background-color: #B8B8B8;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Cobalto</span>
+        <span class="color-option" data-image="../elem/ejecu/oxford/oxf_marino.jpg" style="background-color: #7785B6;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Rosa</span>
+        <span class="color-option" data-image="../elem/ejecu/oxford/oxf_rosa.jpg" style="background-color: #ECDEDE;"></span>
+    </div>
+</div>
 
 <div class="conlog">
   <label for="uploadLogo1">Cargar Logo 1</label>
@@ -35,7 +56,7 @@
   
   <!-- Control para escalar el primer logo -->
   <label for="logoSize1">Tamaño del Logo 1</label>
-  <input type="range" id="logoSize1" min="20" max="300" value="100">
+  <input type="range" id="logoSize1" min="40" max="70" value="100">
   
   <label for="uploadLogo2">Cargar Logo 2</label>
   <!-- Botón para cargar el segundo logo -->
@@ -43,7 +64,7 @@
   
   <!-- Control para escalar el segundo logo -->
   <label for="logoSize2">Tamaño del Logo 2</label>
-  <input type="range" id="logoSize2" min="20" max="300" value="100">
+  <input type="range" id="logoSize2" min="100" max="200" value="100">
 	
 	<div class="contenedor-flex">
     <h2>Cambiar el color del logo.</h2>
@@ -56,6 +77,7 @@
     <button class="color-btn" data-color="blue" style="background-color: cornflowerblue; color: white;">Azul</button>
     <button class="color-btn" data-color="navy" style="background-color: navy; color: white;">Marino</button>
     <button class="color-btn" data-color="gray" style="background-color: gray;">Gris</button>
+	 <button class="color-btn" data-color="none" style="background-color: lightgray; color: black;">Quitar</button>
   </div>
   
   <!-- Contenedores para los logos cargados -->
@@ -74,12 +96,14 @@
   </a> </div>
 	
 <script src="../js/coloresox.js"></script>
-	<script>
+	<!--	
+<script>
     window.onload = function() {
         if (!sessionStorage.getItem('loggedIn')) {
             window.location.href = '../index.html'; // Redirige al index si no está logueado
         }
     };
 </script>
+-->
 </body>
 </html>

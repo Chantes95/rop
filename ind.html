@@ -49,5 +49,14 @@
   </div></a>
   </div>
 </div>
+	
+<script>
+    window.onload = function() {
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = 'index.html'; // Redirige al index si no está logueado
+        }
+    };
+</script>
+
 </body>
 </html>

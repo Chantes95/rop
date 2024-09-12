@@ -26,7 +26,33 @@
 </div>
 
 <!-- Selector de colores -->
-<div class="colores"> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 5.png" style="background-color: #222939;"></span> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 2.png" style="background-color: #27262B;"></span> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 3.png" style="background-color: #F63E3C;"></span> <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 4.png" style="background-color: #504635;"></span><span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 6.png" style="background-color: #642E37;"></span><span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 7.png" style="background-color: #A88E89;"></span> </div>
+<div class="colores">
+    <div class="color-item">
+        <span class="color-name">Marino</span>
+        <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 5.png" style="background-color: #222939;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Negro</span>
+        <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 2.png" style="background-color: #27262B;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Rojo</span>
+        <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 3.png" style="background-color: #F63E3C;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Olivo</span>
+        <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 4.png" style="background-color: #504635;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Vino</span>
+        <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 6.png" style="background-color: #642E37;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Topo</span>
+        <span class="color-option" data-image="../elem/ejecu/DELICIAS/Grupo 7.png" style="background-color: #A88E89;"></span>
+    </div>
+</div>
+
 <div class="conlog">
   <label for="uploadLogo1">Cargar Logo 1</label>
   <!-- Botón para cargar el primer logo -->
@@ -34,7 +60,7 @@
   
   <!-- Control para escalar el primer logo -->
   <label for="logoSize1">Tamaño del Logo 1</label>
-  <input type="range" id="logoSize1" min="20" max="300" value="100">
+  <input type="range" id="logoSize1" min="40" max="70" value="100">
   
   <label for="uploadLogo2">Cargar Logo 2</label>
   <!-- Botón para cargar el segundo logo -->
@@ -42,7 +68,7 @@
   
   <!-- Control para escalar el segundo logo -->
   <label for="logoSize2">Tamaño del Logo 2</label>
-  <input type="range" id="logoSize2" min="20" max="300" value="100">
+  <input type="range" id="logoSize2" min="100" max="200" value="100">
 	
 	<div class="contenedor-flex">
     <h2>Cambiar el color del logo.</h2>
@@ -55,6 +81,7 @@
     <button class="color-btn" data-color="blue" style="background-color: cornflowerblue; color: white;">Azul</button>
     <button class="color-btn" data-color="navy" style="background-color: navy; color: white;">Marino</button>
     <button class="color-btn" data-color="gray" style="background-color: gray;">Gris</button>
+	  <button class="color-btn" data-color="none" style="background-color: lightgray; color: black;">Quitar</button>
   </div>
   
   <!-- Contenedores para los logos cargados -->
@@ -71,5 +98,12 @@
   </div>
   </a> </div>
 <script src="../js/coloresox.js"></script>
+<script>
+    window.onload = function() {
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = '../index.html'; // Redirige al index si no está logueado
+        }
+    };
+</script>
 </body>
 </html>

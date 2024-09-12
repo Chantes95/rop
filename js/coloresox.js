@@ -157,19 +157,19 @@ document.querySelectorAll('.color-btn').forEach(button => {
 function applyColorFilter(logo, color) {
     switch(color) {
         case 'white':
-            logo.style.filter = 'brightness(0) saturate(100%) invert(100%)'; // Blanco
+            logo.style.filter = 'brightness(0) saturate(100%) invert(100%)';
             break;
         case 'black':
-            logo.style.filter = 'brightness(0) saturate(100%)'; // Negro
+            logo.style.filter = 'brightness(0) saturate(100%)';
             break;
         case 'blue':
-            logo.style.filter = 'brightness(2.0) saturate(250%) sepia(100%) hue-rotate(175deg)'; // Azul Cielo más claro y brillante
+            logo.style.filter = 'brightness(2.0) saturate(250%) sepia(100%) hue-rotate(175deg)';
             break;
         case 'navy':
-            logo.style.filter = 'brightness(0.7) saturate(100%) sepia(100%) hue-rotate(190deg) saturate(300%)'; // Azul Marino ajustado
+            logo.style.filter = 'brightness(0.7) saturate(100%) sepia(100%) hue-rotate(190deg) saturate(300%)'; 
             break;
         case 'gray':
-            logo.style.filter = 'brightness(0.9) saturate(0%) grayscale(100%)'; // Gris
+            logo.style.filter = 'brightness(0.9) saturate(0%) grayscale(100%)'; 
             break;
         default:
             logo.style.filter = 'none';
