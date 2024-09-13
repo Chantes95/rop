@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fondo</title>
+<link href="css/fondo.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<ul class="menu">
+  <li><a href="productos.html"><img src="elem/menu/menu-14.png"  alt=""/></a></li>
+  <li><a href="eje.html"><img src="elem/menu/menu-08.png" alt=""/></a></li>
+  <li><a href="ind.html"><img src="elem/menu/menu-09.png" alt=""/></a></li>
+  <li><a href="cas.html"><img src="elem/menu/menu-10.png" alt=""/></a></li>
+</ul>
+<div class="container">
+  <div class="fondo">
+    <h1>Eliminar Fondo de Imagen</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <button id="removeBgButton">Quitar Fondo</button>
+    <div id="output"></div>
+    <br>
+    <div class="descargas"> <a id="downloadBtn" style="display: none;">Descargar Imagen</a> <!-- Botón para descargar la imagen --> 
+    </div>
+  </div>
+</div>
+<script src="js/app.js"></script>
+	<script>
+    window.onload = function() {
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = 'index.html'; // Redirige al index si no está logueado
+        }
+    };
+</script>
+</body>
+</html>
