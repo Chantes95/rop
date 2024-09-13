@@ -1,22 +1,22 @@
 @charset "utf-8";
 .salir2 {
     display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-    align-items: center;     /* Centra el botón verticalmente */
-    padding-top: 20px;               /* Asegura que ocupe toda la altura de la página */
+    justify-content: center; 
+    align-items: center;     
+    padding-top: 20px;               
     padding-bottom: 20px;
 }
 .bot2 {
-    background-color: #0D284A;  /* Color de fondo del botón */
-    color: white;               /* Color del texto */
-    cursor: pointer;            /* Cambia el cursor a "mano" */
-    text-align: center;         /* Asegura que el texto dentro esté centrado */
-    width: 290px;               /* Ancho del botón */
-    height: 59px;               /* Altura del botón */
-    border-radius: 30px;        /* Bordes redondeados */
+    background-color: #0D284A;  
+    color: white;               
+    cursor: pointer;            
+    text-align: center;         
+    width: 290px;               
+    height: 59px;               
+    border-radius: 30px;        
     display: flex;
-    justify-content: center;    /* Centra el texto horizontalmente */
-    align-items: center;        /* Centra el texto verticalmente */
+    justify-content: center;    
+    align-items: center;       
 }
 
 
@@ -54,22 +54,22 @@
     .oxti {
         text-align: center;
         font-family: 'Inter', sans-serif;
-        font-weight: 800; /* Extra Bold */
+        font-weight: 800; 
         line-height: 73px;
         font-size: 64px;
         color: #0D284A;
     }
    .cami {
     display: flex;
-    justify-content: center;  /* Centra horizontalmente la imagen */
-    align-items: center;      /* Centra verticalmente la imagen */
-    height: 100%;             /* Asegura que el contenedor ocupe el 100% de la altura */
+    justify-content: center;  
+    align-items: center;      
+    height: 100%;             
     width: 100%;
 }
 
 .cami img {
-    max-width: 100%;          /* Asegura que la imagen no sea más grande que el contenedor */
-    height: auto;             /* Mantiene la proporción de la imagen */
+    max-width: 100%;          
+    height: auto;            
 }
     .colores {
     display: flex;
@@ -91,7 +91,7 @@
         margin: 0 10px;
         cursor: pointer;
         border: 2px solid transparent;
-        transition: all 0.3s ease; /* Suaviza la transición del tamaño */
+        transition: all 0.3s ease; 
     }
     .color-option:hover {
         border: 2px solid #333;
@@ -100,14 +100,14 @@
     .color-option.active {
         width: 40px;
         height: 40px;
-        border: 2px solid #333; /* Opcional: puede tener un borde adicional para indicar que está seleccionado */
+        border: 2px solid #333; 
     }
     .logo-container {
     position: absolute;
-    top: 100px; /* Posición inicial */
-    left: 100px; /* Posición inicial */
-    width: 100px; /* Tamaño inicial del logo */
-    height: 100px; /* Tamaño inicial del logo */
+    top: 100px; 
+    left: 100px;
+    width: 100px;
+    height: 100px;
     cursor: move;
 }
 
@@ -129,44 +129,44 @@ input[type="file"]{
 }
 .conlog {
     display: flex;
-    flex-direction: column;  /* Organiza los elementos en una columna */
-    justify-content: center; /* Centra los elementos verticalmente */
-    align-items: center;     /* Centra los elementos horizontalmente */
-    text-align: center;      /* Asegura que el texto esté centrado */
-    margin: 0 auto;          /* Centra el contenedor si es necesario */
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;     
+    text-align: center;      
+    margin: 0 auto;          
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 20px;           /* Añade algo de espacio alrededor */
+    padding-bottom: 20px;           
 }
 	
 .salir {
     display: flex;
-    justify-content: center; /* Centra el botón horizontalmente */
-    align-items: center;     /* Centra el botón verticalmente */
-    padding-top: 20px;               /* Asegura que ocupe toda la altura de la página */
+    justify-content: center; 
+    align-items: center;    
+    padding-top: 20px;              
     padding-bottom: 20px;
 }
 
 a {
-    text-decoration: none;   /* Elimina la decoración del enlace */
+    text-decoration: none; 
 }
 
 .bot {
-    background-color: #0D284A;  /* Color de fondo del botón */
-    color: white;               /* Color del texto */
-    cursor: pointer;            /* Cambia el cursor a "mano" */
-    text-align: center;         /* Asegura que el texto dentro esté centrado */
-    width: 290px;               /* Ancho del botón */
-    height: 59px;               /* Altura del botón */
-    border-radius: 30px;        /* Bordes redondeados */
+    background-color: #0D284A;  
+    color: white;               
+    cursor: pointer;            
+    text-align: center;        
+    width: 290px;               
+    height: 59px;               
+    border-radius: 30px;        
     display: flex;
-    justify-content: center;    /* Centra el texto horizontalmente */
-    align-items: center;        /* Centra el texto verticalmente */
+    justify-content: center;    
+    align-items: center;        
 }
 
 .bot:hover {
-    background-color: #003366;  /* Color de fondo al pasar el mouse */
+    background-color: #003366;  
 }
 a .bot h3 {
     font-family: Arial, sans-serif;
@@ -196,12 +196,12 @@ a .bot h3 {
 
 /* Estilo general para el control deslizante */
 input[type="range"] {
-    -webkit-appearance: none;  /* Elimina el estilo predeterminado de los navegadores en WebKit (Chrome, Safari) */
-    width: 34%;               /* Ajusta el ancho completo */
-    height: 20px;              /* Altura del "track" */
-    background: #ddd;          /* Color de fondo del "track" */
-    border-radius: 5px;        /* Bordes redondeados */
-    outline: none;             /* Elimina el borde de enfoque */
+    -webkit-appearance: none;  
+    width: 34%;              
+    height: 20px;              
+    background: #ddd;          
+    border-radius: 5px;        
+    outline: none;             
 }
 .conlog label {
     padding-bottom: 20px;
@@ -213,36 +213,37 @@ input[type="range"] {
 
 /* Estilo del "thumb" (el botón que arrastras) */
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Elimina el estilo predeterminado de los navegadores en WebKit */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 25px;              /* Ancho del "thumb" */
-    height: 25px;             /* Altura del "thumb" */
-    background: #0D284A;      /* Color del "thumb" */
-    cursor: pointer;          /* Cambia el cursor a "mano" cuando pasas sobre él */
-    border-radius: 50%;       /* Redondea el "thumb" */
+    width: 25px;              
+    height: 25px;             
+    background: #0D284A;      
+    cursor: pointer;          
+    border-radius: 50%;       
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 25px;              /* Ancho del "thumb" en Firefox */
-    height: 25px;             /* Altura del "thumb" en Firefox */
-    background: #0D284A;      /* Color del "thumb" */
+    width: 25px;             
+    height: 25px;            
+    background: #0D284A;      
     cursor: pointer;
-    border-radius: 50%;       /* Redondea el "thumb" */
+    border-radius: 50%;      
 }
 
 /* Para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
     input[type="range"] {
-        height: 20px;  /* Hace que el "track" sea más alto en móviles */
+        height: 20px; 
     }
     
     input[type="range"]::-webkit-slider-thumb {
-        width: 35px;  /* Hace el "thumb" más grande en móviles */
+        width: 35px;  
         height: 35px;
     }
     
     input[type="range"]::-moz-range-thumb {
-        width: 35px;  /* Hace el "thumb" más grande en móviles */
+        width: 35px;  
         height: 35px;
     }
 }
+
