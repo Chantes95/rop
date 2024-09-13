@@ -1,4 +1,24 @@
 @charset "utf-8";
+.salir2 {
+    display: flex;
+    justify-content: center; /* Centra el botón horizontalmente */
+    align-items: center;     /* Centra el botón verticalmente */
+    padding-top: 20px;               /* Asegura que ocupe toda la altura de la página */
+    padding-bottom: 20px;
+}
+.bot2 {
+    background-color: #0D284A;  /* Color de fondo del botón */
+    color: white;               /* Color del texto */
+    cursor: pointer;            /* Cambia el cursor a "mano" */
+    text-align: center;         /* Asegura que el texto dentro esté centrado */
+    width: 290px;               /* Ancho del botón */
+    height: 59px;               /* Altura del botón */
+    border-radius: 30px;        /* Bordes redondeados */
+    display: flex;
+    justify-content: center;    /* Centra el texto horizontalmente */
+    align-items: center;        /* Centra el texto verticalmente */
+}
+
 * {
     margin: 0;
     padding: 0;
