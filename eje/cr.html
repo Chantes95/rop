@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Prenda Oxford</title>
+<title>Prenda Cristóbal</title>
 <link href="../css/cr.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -13,10 +13,10 @@
   <li><a href="../ind.html"><img src="../elem/menu/menu-09.png" alt=""/></a></li>
   <li><a href="../cas.html"><img src="../elem/menu/menu-10.png" alt=""/></a></li>
 </ul>
-<h2 class="oxti">Oxford</h2>
+<h2 class="oxti">Cristóbal</h2>
 <div class="cami"> 
   <!-- Prenda que cambiará de color --> 
-  <img id="prenda" src="../elem/ejecu/oxford/oxf_marino.jpg" alt="Prenda actual"> 
+  <img src="../elem/ejecu/cristóbal/Grupo 5.png" alt="Prenda actual" id="prenda"> 
   
   <!-- Contenedor del primer logo -->
   <div id="logoContainer1" class="logo-container" style="display:none;"> <img id="logoImg1" src="" alt="Logo 1 del Usuario" /> </div>
@@ -26,22 +26,74 @@
 </div>
 
 <!-- Selector de colores -->
-<div class="colores"> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_marino.jpg" style="background-color: #003366;"></span> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_azul_claro.jpg" style="background-color: #A9CCE3;"></span> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_rosa.jpg" style="background-color: #ECDEDE;"></span> <span class="color-option" data-image="../elem/ejecu/oxford/oxf_gris.jpg" style="background-color: #BDC3C7;"></span> </div>
+<div class="colores">
+    <div class="color-item">
+        <span class="color-name">Marino</span>
+        <span class="color-option" data-image="../elem/ejecu/cristóbal/Grupo 5.png" style="background-color: #222939;"></span>
+    </div>
+    <div class="color-item">
+        <span class="color-name">Negro</span>
+        <span class="color-option" data-image="../elem/ejecu/cristóbal/Grupo 3.png" style="background-color: #27262B;"></span>
+    </div>
+     <div class="color-item">
+        <span class="color-name">Gris</span>
+        <span class="color-option" data-image="../elem/ejecu/cristóbal/Grupo 6.png" style="background-color: #9A9A9A;"></span>
+    </div> 
+	<div class="color-item">
+        <span class="color-name">Vino</span>
+        <span class="color-option" data-image="../elem/ejecu/cristóbal/Grupo 4.png" style="background-color: #853744;"></span>
+    </div>
+	<div class="color-item">
+        <span class="color-name">Olivo</span>
+        <span class="color-option" data-image="../elem/ejecu/cristóbal/Grupo 2.png" style="background-color: #685C4D;"></span>
+    </div>
+	<div class="color-item">
+        <span class="color-name">Rojo</span>
+        <span class="color-option" data-image="../elem/ejecu/cristóbal/Grupo 1.png" style="background-color: #EF003C;"></span>
+    </div>
+	
+</div>
+
 <div class="conlog">
+	<div class="salir2"> <a href="../fondo.html" target="_blank">
+  </a> </div>
   <label for="uploadLogo1">Cargar Logo 1</label>
   <!-- Botón para cargar el primer logo -->
   <input type="file" id="uploadLogo1" accept="image/*">
   
   <!-- Control para escalar el primer logo -->
   <label for="logoSize1">Tamaño del Logo 1</label>
-  <input type="range" id="logoSize1" min="20" max="300" value="100">
+  <input type="range" id="logoSize1" min="40" max="70" value="100">
+  
   <label for="uploadLogo2">Cargar Logo 2</label>
   <!-- Botón para cargar el segundo logo -->
   <input type="file" id="uploadLogo2" accept="image/*">
   
   <!-- Control para escalar el segundo logo -->
   <label for="logoSize2">Tamaño del Logo 2</label>
-  <input type="range" id="logoSize2" min="20" max="300" value="100">
+  <input type="range" id="logoSize2" min="100" max="200" value="100">
+	
+	<div class="contenedor-flex">
+    <h2>Cambiar el color del logo.</h2>
+</div>
+  
+  <!-- Paleta de colores para cambiar el color de los logos -->
+  <div class="colorPalette">
+    <button class="color-btn" data-color="white" style="background-color: white;">Blanco</button>
+    <button class="color-btn" data-color="black" style="background-color: black; color: white;">Negro</button>
+    <button class="color-btn" data-color="blue" style="background-color: cornflowerblue; color: white;">Azul</button>
+    <button class="color-btn" data-color="navy" style="background-color: navy; color: white;">Marino</button>
+    <button class="color-btn" data-color="gray" style="background-color: gray;">Gris</button>
+	  <button class="color-btn" data-color="none" style="background-color: lightgray; color: black;">Quitar</button>
+  </div>
+  
+  <!-- Contenedores para los logos cargados -->
+  <div id="logoContainer1" class="logo-container" style="display:none;">
+    <img id="logoImg1" src="" alt="Logo 1 del Usuario" />
+  </div>
+  <div id="logoContainer2" class="logo-container" style="display:none;">
+    <img id="logoImg2" src="" alt="Logo 2 del Usuario" />
+  </div>
 </div>
 <div class="salir"> <a href="../eje.html">
   <div class="bot">
@@ -49,5 +101,12 @@
   </div>
   </a> </div>
 <script src="../js/coloresox.js"></script>
+ <script>
+    window.onload = function() {
+        if (!sessionStorage.getItem('loggedIn')) {
+            window.location.href = '../index.html'; // Redirige al index si no está logueado
+        }
+    };
+</script>
 </body>
 </html>
